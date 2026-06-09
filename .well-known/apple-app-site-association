@@ -28,6 +28,20 @@
         ]
       },
       {
+        "appID": "4A37FL496N.vn.co.takenaka.IchiPlusBase",
+        "paths": [
+          "/password*",
+          "/baseQRInfo*",
+          "/baseRentalQRInfo*",
+          "/QRreader*",
+          "/extWebLink*",
+          "/extAppLink*",
+          "/RFIDreader*",
+          "/Beacon*",
+          "/reservations*"
+        ]
+      },
+      {
         "appID": "D5NVNWQFKD.vn.co.takenaka.IchiPlusBase",
         "paths": [
           "/password*",
