@@ -25,6 +25,11 @@
           "/RFIDreader*",
           "/Beacon*",
           "/reservations*"
+        ],
+        "components": [
+          {
+            "/": "/*"
+          }
         ]
       },
       {
@@ -39,6 +44,11 @@
           "/RFIDreader*",
           "/Beacon*",
           "/reservations*"
+        ],
+        "components": [
+          {
+            "/": "/*"
+          }
         ]
       },
       {
@@ -53,6 +63,11 @@
           "/RFIDreader*",
           "/Beacon*",
           "/reservations*"
+        ],
+        "components": [
+          {
+            "/": "/*"
+          }
         ]
       }
     ]
