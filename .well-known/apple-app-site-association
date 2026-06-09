@@ -1,0 +1,46 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "D5NVNWQFKD.com.example.fposapp",
+        "paths": [
+          "/mebukuidapp/myauth/sign/*"
+        ],
+        "components": [
+          {
+            "/": "/mebukuidapp/myauth/sign/*"
+          }
+        ]
+      },
+      {
+        "appID": "KWL6GTWP8L.vn.co.takenaka.IchiPlusBase",
+        "paths": [
+          "/password*",
+          "/baseQRInfo*",
+          "/baseRentalQRInfo*",
+          "/QRreader*",
+          "/extWebLink*",
+          "/extAppLink*",
+          "/RFIDreader*",
+          "/Beacon*",
+          "/reservations*"
+        ]
+      },
+      {
+        "appID": "D5NVNWQFKD.vn.co.takenaka.IchiPlusBase",
+        "paths": [
+          "/password*",
+          "/baseQRInfo*",
+          "/baseRentalQRInfo*",
+          "/QRreader*",
+          "/extWebLink*",
+          "/extAppLink*",
+          "/RFIDreader*",
+          "/Beacon*",
+          "/reservations*"
+        ]
+      }
+    ]
+  }
+}

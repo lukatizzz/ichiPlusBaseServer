@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Links Test - IchiNinshiki</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f2f2f7;
+      margin: 0;
+      padding: 20px;
+      color: #1c1c1e;
+    }
+    h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .subtitle { color: #8e8e93; font-size: 13px; margin-bottom: 24px; }
+    .section { margin-bottom: 28px; }
+    .section-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #8e8e93;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .link-item {
+      display: block;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: #007aff;
+      font-size: 15px;
+      border-bottom: 1px solid #f2f2f7;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .link-item:last-child { border-bottom: none; }
+    .link-item .icon { font-size: 20px; width: 28px; text-align: center; }
+    .link-item .info { flex: 1; }
+    .link-item .name { font-weight: 600; color: #1c1c1e; font-size: 15px; }
+    .link-item .url { font-size: 11px; color: #8e8e93; margin-top: 2px; word-break: break-all; }
+    .link-item .arrow { color: #c7c7cc; font-size: 14px; }
+    .aasa-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 14px 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .aasa-box a { color: #007aff; word-break: break-all; font-size: 14px; }
+    .tip {
+      background: #fff9c4;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 13px;
+      color: #7d6608;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Universal Links Test</h1>
+<p class="subtitle">IchiNinshiki — tap link trên device để test (https://t4.zyyx.vn/ichiplus/sever/)</p>
+
+<div class="tip">
+  💡 Mở trang này trên <b>iPhone/iPad</b> có cài app. Tap link để kiểm tra Universal Link có mở app không.
+</div>
+
+<!-- AASA -->
+<div class="section">
+  <div class="section-title">Apple App Site Association</div>
+  <div class="aasa-box">
+    <a href=" ./.well-known/apple-app-site-association" target="_blank">
+      Link AASA
+    </a>
+  </div>
+</div>
+
+<!-- Account domain (production / dev2) -->
+<div class="section">
+  <div class="section-title">Account</div>
+  <div class="card">
+    <a class="link-item" href="https://account.ichiplus.com/account/startup">
+      <span class="icon">🚀</span>
+      <div class="info">
+        <div class="name">Startup (prod)</div>
+        <div class="url">account.ichiplus.com /account/startup</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+    <a class="link-item" href="https://account.ichi-plus-dev2.zyyx.jp/account/extWebLink">
+      <span class="icon">🌐</span>
+      <div class="info">
+        <div class="name">extWebLink (dev2)</div>
+        <div class="url">account.ichi-plus-dev2.zyyx.jp /account/extWebLink</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+    <a class="link-item" href="https://account.ichi-plus-dev2.zyyx.jp/account/extAppLink">
+      <span class="icon">📱</span>
+      <div class="info">
+        <div class="name">extAppLink (dev2)</div>
+        <div class="url">account.ichi-plus-dev2.zyyx.jp /account/extAppLink</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+  </div>
+</div>
+
+<!-- QRreader Rental -->
+<div class="section">
+  <div class="section-title">QRreader Rental</div>
+  <div class="card">
+    <a class="link-item" href="./QRreader?ProjectID=1201&uiType=rental&listType=RENTAL_SEARCH&workerID=W01274&x-success=https://rental.ichi-plus-dev2.zyyx.jp/rental/search/rental_list/1201?back130041">
+      <span class="icon">📷</span>
+      <div class="info">
+        <div class="name">rental 1201</div>
+        <div class="url">QRreader ProjectID=1201 workerID=W01274</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+    <a class="link-item" href="./QRreader?ProjectID=1047&uiType=rental&listType=RENTAL_SEARCH&workerID=W01274&x-success=https://rental.ichi-plus-dev2.zyyx.jp/rental/search/rental_list/1047?back130041">
+      <span class="icon">📷</span>
+      <div class="info">
+        <div class="name">rental 1047</div>
+        <div class="url">QRreader ProjectID=1047 workerID=W01274</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+  </div>
+</div>
+
+<!-- Base QR Info -->
+<div class="section">
+  <div class="section-title">Base QR Info</div>
+  <div class="card">
+    <a class="link-item" href="./baseQRInfo?projectID=1048&floorID=111&xcoordi=222&ycoordi=333">
+      <span class="icon">📍</span>
+      <div class="info">
+        <div class="name">1048</div>
+        <div class="url">baseQRInfo projectID=1048 floorID=111</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+    <a class="link-item" href="./baseQRInfo?projectID=1047&floorID=111&xcoordi=222&ycoordi=333">
+      <span class="icon">📍</span>
+      <div class="info">
+        <div class="name">1047</div>
+        <div class="url">baseQRInfo projectID=1047 floorID=111</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+    <a class="link-item" href="./baseQRInfo?projectID=1201&floorID=111&xcoordi=222&ycoordi=333">
+      <span class="icon">📍</span>
+      <div class="info">
+        <div class="name">1201 Matsusaka</div>
+        <div class="url">baseQRInfo projectID=1201 floorID=111</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+  </div>
+</div>
+
+<!-- Base Rental QR Info - Inventory -->
+<div class="section">
+  <div class="section-title">Base Rental QR Info (Inventory)</div>
+  <div class="card">
+    <a class="link-item" href="./baseRentalQRInfo?projectID=1048&type=inventory&x-success=https://ichi-plus-dev2.zyyx.jp/rental/search/rental_list/1047?back163409&workerID=W03729">
+      <span class="icon">🏗️</span>
+      <div class="info">
+        <div class="name">inventory 1048 W03729</div>
+        <div class="url">projectID=1048 type=inventory</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+    <a class="link-item" href="./baseRentalQRInfo?projectID=1047&type=inventory&x-success=https://ichi-plus-dev2.zyyx.jp/rental/search/rental_list/1047?back163409&workerID=W03729">
+      <span class="icon">🏗️</span>
+      <div class="info">
+        <div class="name">inventory 1047 W03729</div>
+        <div class="url">projectID=1047 type=inventory</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+    <a class="link-item" href="./baseRentalQRInfo?projectID=1048&type=search&x-success=https://ichi-plus-dev2.zyyx.jp/rental/search/rental_list/1047?back163409&workerID=W03729">
+      <span class="icon">🔍</span>
+      <div class="info">
+        <div class="name">search 1048 W03729</div>
+        <div class="url">projectID=1048 type=search</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+    <a class="link-item" href="./baseRentalQRInfo?projectID=1047&type=search&x-success=https://ichi-plus-dev2.zyyx.jp/rental/search/rental_list/1047?back163409&workerID=W03729">
+      <span class="icon">🔍</span>
+      <div class="info">
+        <div class="name">search 1047 W03729</div>
+        <div class="url">projectID=1047 type=search</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+  </div>
+</div>
+
+<!-- Other (Password, Reservations, Readers) -->
+<div class="section">
+  <div class="section-title">Khác (Password, Reservations, Readers)</div>
+  <div class="card">
+    <a class="link-item" href="./password?token=TEST_TOKEN_123">
+      <span class="icon">🔑</span>
+      <div class="info">
+        <div class="name">Change Password</div>
+        <div class="url">/password?token=TEST_TOKEN_123</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+    <a class="link-item" href="./reservations?projectID=1047&belongID=BELONG_01&equipID=EQUIP_01&reservedDate=2026-03-01&ampm=am&unlock=0">
+      <span class="icon">🔐</span>
+      <div class="info">
+        <div class="name">Reservations</div>
+        <div class="url">/reservations projectID=1047</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+    <a class="link-item" href="./RFIDreader?ProjectID=1047&x-success=ichiplus-base://callback">
+      <span class="icon">📡</span>
+      <div class="info">
+        <div class="name">RFID Reader</div>
+        <div class="url">/RFIDreader ProjectID=1047</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+    <a class="link-item" href="./Beacon?ProjectID=1047&x-success=ichiplus-base://callback">
+      <span class="icon">🔵</span>
+      <div class="info">
+        <div class="name">Beacon</div>
+        <div class="url">/Beacon ProjectID=1047</div>
+      </div>
+      <span class="arrow">›</span>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
