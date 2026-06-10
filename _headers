@@ -1,0 +1,9 @@
+# Netlify headers
+# Ép Content-Type: application/json cho các file trong .well-known/
+# Cần cho Universal Links (apple-app-site-association) và Android assetlinks.json
+
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+
+/.well-known/*
+  Content-Type: application/json
