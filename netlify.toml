@@ -1,0 +1,8 @@
+# Tắt Pretty URLs để Netlify KHÔNG tự đổi đường dẫn về chữ thường (301).
+# Nhờ đó các path dạng hoa như /baseQRInfo, /QRreader... được phục vụ
+# đúng nguyên dạng (HTTP 200), khớp với khai báo trong apple-app-site-association.
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = false
